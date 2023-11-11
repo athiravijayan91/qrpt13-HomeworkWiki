@@ -12,7 +12,8 @@ describe("myFunction", () => {
     expect(myFunction(100)).toBe("big");
   });
   it("returns the word 'negative' if a negative number is passed in", () => {
-    expect(myFunction(-1)).toBe("negative");
+    expect(myFunction(-1)).toBe("negative");// testing 
+    
   });
 });
 
@@ -21,18 +22,18 @@ import { blockBuster } from "./newFunction";
 
 describe('Testing Block Buster', () => {
   it('should return the movie set for MovieOne', () => {
-    expect(blockBuster()).toBe(""); 
+    expect(blockBuster("movieOne")).toBe("Spiderman"); 
   }); 
   it("should return the movie set for movie two", () => {
-    expect(blockBuster()).toBe(""); 
+    expect(blockBuster("movieTwo")).toBe("Batman"); 
   }); 
   it("should return the movie set for movie three", () => {
-    expect(blockBuster()).toBe(""); 
+    expect(blockBuster("movieThree")).toBe("Joker"); 
   }); 
   it("should return the movie set for movie four", () => {
-    expect(blockBuster()).toBe(""); 
+    expect(blockBuster("movieFour")).toBe("Avengers"); 
   });
   it("should return the movie set for movie five", () => {
-    expect(blockBuster()).toBe(""); 
+    expect(blockBuster("movieFive")).toBe("Starwars"); 
   }); 
 }); 

@@ -1,14 +1,24 @@
 export function myFunction(myNum: number): string {
     if (myNum == 5) {
-        return 'true'
-    } else if(myNum > 5) {
-        return 'false'
-    }else if (){
 
-    }else {
-        
+        return 'true';
+
+    }  else if(myNum > 5) {
+
+        return 'big';
+
+    }else if (myNum < 5 && myNum>=0){
+
+        return "false";
+
+    }else  {
+        return "negative";
     }
 }
+
+
+
+
 
 /* 
 EN: Add your own function starting on line 20 
@@ -17,6 +27,20 @@ EN: Add your own function starting on line 20
 !Add expects to the test checking to make sure you are getting back the correct movie.
 */
 
-export function blockBuster() {
+export function blockBuster(movie: string): string {
+    if(movie  == "movieOne"){
+        return "Spiderman";
 
+    }else if(movie == "movieTwo"){
+        return "Batman";
+
+    }else if(movie =="movieThree" ){
+        return "Joker";
+    }else if (movie == "movieFour"){
+        return "Avengers";
+    }else if (movie == "movieFive"){
+        return "Starwars";
+    }else{
+         return "No movie";
+    }
 }

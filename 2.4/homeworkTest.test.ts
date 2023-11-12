@@ -29,6 +29,8 @@ const saveButton: By = By.id("saveBtn");
 const cancelButton: By = By.name("cancel");
 const errorCard: By = By.css(".errorCard");
 
+// describe contains all our tests
+
 describe("Employee Manager 1.2", () => {
 
     beforeEach(async () => {
@@ -121,7 +123,7 @@ describe("Employee Manager 1.2", () => {
             await driver.findElement(bernice).click();
             expect(
                 await (await driver.findElement(nameInput)).getAttribute("value")
-            ).toBe("Test Name"); //fail here "Test Name"
+            ).toBe("Test Name"); //fail here "Test Name" here we are entering the name as "Test Nmae" and we expect it to be "Bernice Ortize"
     });
 });
 

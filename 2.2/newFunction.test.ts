@@ -13,12 +13,13 @@ describe("myFunction", () => {
   });
   it("returns the word 'negative' if a negative number is passed in", () => {
     expect(myFunction(-1)).toBe("negative");// testing 
-    
+
   });
 });
 
 
 import { blockBuster } from "./newFunction";
+
 
 describe('Testing Block Buster', () => {
   it('should return the movie set for MovieOne', () => {

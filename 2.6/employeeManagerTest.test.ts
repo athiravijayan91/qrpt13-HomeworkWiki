@@ -38,30 +38,7 @@ import {Builder,By, Capabilities, until, WebDriver,WebElement } from "selenium-w
         await this.driver.get(this.url);
         await this.driver.wait(until.elementLocated(this.header));
     }; 
-    async getElement(elementBy: By):Promise<WebElement> {
-        await this.driver.wait(until.elementLocated(elementBy)); 
-        let element = await this.driver.findElement(elementBy); 
-        await this.driver.wait(until.elementIsVisible(element)); 
-        return element; 
-    };
-    async sendKeys(elementBy:By, keys:any) {
-        await this.driver.wait(until.elementLocated(elementBy)); 
-        return this.driver.findElement(elementBy).sendKeys(keys); 
-    }; 
-    async setInput(elementBy:By, keys: any): Promise<void> {
-        let input = await this.getElement(elementBy); 
-        await input.clear(); 
-        return input.sendKeys(keys); 
-    }; 
-    async click(elementBy: By) {
-        await this.driver.wait(until.elementLocated(elementBy)); 
-        return (await this.driver.findElement(elementBy)).click();
-    }; 
-    async getText(elementBy: By) {
-        await this.driver.wait(until.elementLocated(elementBy)); 
-        return this.driver.findElement(elementBy).getText(); 
-    }; 
-
+    
   }
 
   const emPage = new employeePage(driver);

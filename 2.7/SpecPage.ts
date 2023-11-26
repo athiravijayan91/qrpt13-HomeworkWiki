@@ -1,4 +1,4 @@
-import {Builder,By, Capabilities, until, WebDriver,WebElement } from "selenium-webdriver";
+import {Builder,By, Capabilities, until, WebDriver,WebElement } from "selenium-webdriver"; //importing selenium driver locally to this folder so that we can use the selenium keywords
   const chromedriver = require("chromedriver");
 
   const driver: WebDriver = new Builder()

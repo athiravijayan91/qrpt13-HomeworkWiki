@@ -1,4 +1,5 @@
-import { By, WebDriver, until} from "selenium-webdriver";
+import {Builder,By, Capabilities, until, WebDriver,WebElement } from "selenium-webdriver";
+  const chromedriver = require("chromedriver");
 
 
 export class SpecPage {
@@ -13,22 +14,34 @@ export class SpecPage {
         this.driver = driver;
     }
 
-    async navigate() {
-        await this.driver.get(this.url)
-        await this.driver.wait(until.elementLocated(this.searchBar))
-    }
-    async sendKeys(elementBy: By, keys) {
-        await this.driver.wait(until.elementLocated(elementBy))
-        return this.driver.findElement(elementBy).sendKeys(keys)
-    }
-    async getText(elementBy: By) {
-        await this.driver.wait(until.elementLocated(elementBy))
-        return (await this.driver.findElement(elementBy)).getText()
-    }
-    async doSearch(text: string) {
-        return this.sendKeys(this.searchBar, `${text}\n`)
-    }
-    async getResults() {
-        return this.getText(this.results)
-    }
+   async navigate() {
+    await this.driver.get(this.url); 
+    await this.driver.wait(until.elementLocated(this.searchBar)); 
+}; 
+
+// enteting in the search bar
+
+async sendKeys(elementBy: By, keys) {
+  await this.driver.wait(until.elementLocated(elementBy))
+  return this.driver.findElement(elementBy).sendKeys(keys)
 }
+
+
+
+async getText(elementBy: By) {
+  await this.driver.wait(until.elementLocated(elementBy))
+  return (await this.driver.findElement(elementBy)).getText()
+}
+
+// searching for the keyword purple
+async doSearch(text: string) {
+  return this.sendKeys(this.searchBar, `${text}\n`)
+}
+async getResults() {
+  return this.getText(this.results)
+}
+
+
+
+
+  }

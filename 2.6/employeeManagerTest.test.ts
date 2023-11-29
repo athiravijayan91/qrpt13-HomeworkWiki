@@ -45,11 +45,11 @@ import {Builder,By, Capabilities, until, WebDriver,WebElement } from "selenium-w
 
   describe("Employee Manger Test", () => {
       beforeEach(async () => {
-          await emPage.navigate();
+          await emPage.navigate();// before each test, navigate to URL
       });
 
       afterAll(async () => {
-          await driver.quit()
+          await driver.quit() // sfter each test , close the browser
       })
       test("adding an employee", async () => {
           await driver.wait(until.elementLocated(emPage.header))

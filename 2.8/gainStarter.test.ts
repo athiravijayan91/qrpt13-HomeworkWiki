@@ -12,6 +12,49 @@ class Animal {
     }
   }
   
+
+  class Fish extends Animal{
+    saltwater : boolean;
+     constructor(name: string, food: string, saltwater: boolean){
+
+      super(name, null, food);
+      this.saltwater = saltwater;
+
+     }
+
+     soundOff(): string {
+         return `The ${super.name} is a fish and does not make sounds.`;
+     }
+
+     habitat():string{
+      if(this.saltwater==true){return `The ${super.name} is a saltwater fish.`}
+      else { return `The ${super.name} is a freshwater fish.`}
+      
+     }
+     
+
+    
+  }
+
+
+  class Bird extends Animal{
+
+    flightSpeed : number;
+    constructor(name: string, sound: string, food: string, flightSpeed:number){
+      super(name, sound, food);
+      this.flightSpeed = flightSpeed;
+
+    }
+
+    soundOff(): string {
+        return `The ${super.name} makes the sound "${super.sound}".`
+    }
+
+    fly():string{
+      if(this.flightSpeed>0){return `The ${super.name} flies at speeds of up to ${this.flightSpeed} meters per second!`}
+      else{return `The ${super.name}  is a flightless bird.`}
+    }
+  }
   /**
    * Fish extends Animal, but takes different properties, has a different soundOff() method, and a new method, habitat().
    * @param {string} name - as expected
@@ -20,6 +63,7 @@ class Animal {
    */
   
   /**
+   
    * Bird extends Animal, but takes an additional property, and has an additional method, fly().
    * @param {string} name - as expected
    * @param {string} sound - as expected

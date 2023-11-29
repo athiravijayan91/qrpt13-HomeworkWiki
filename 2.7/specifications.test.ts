@@ -11,7 +11,7 @@ const page = new SpecPage(driver);//
 test("it works", async () => {
   await page.navigate();
   await page.doSearch("purple");
-  expect(await page.getResults()).toContain("purple");
+  expect(await page.getResults()).toContain("purple\n");
 });
 
 afterAll(async () => {

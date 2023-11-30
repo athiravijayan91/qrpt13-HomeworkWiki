@@ -23,12 +23,12 @@ class Animal {
      }
 
      soundOff(): string {
-         return `The ${super.name} is a fish and does not make sounds.`;
+         return `The ${this.name} is a fish and does not make sounds.`;
      }
 
      habitat():string{
-      if(this.saltwater==true){return `The ${super.name} is a saltwater fish.`}
-      else { return `The ${super.name} is a freshwater fish.`}
+      if(this.saltwater==true){return `The ${this.name} is a saltwater fish.`}
+      else { return `The ${this.name} is a freshwater fish.`}
       
      }
      
@@ -47,12 +47,12 @@ class Animal {
     }
 
     soundOff(): string {
-        return `The ${super.name} makes the sound "${super.sound}".`
+        return `The ${this.name} makes the sound "${this.sound}".`
     }
 
     fly():string{
-      if(this.flightSpeed>0){return `The ${super.name} flies at speeds of up to ${this.flightSpeed} meters per second!`}
-      else{return `The ${super.name}  is a flightless bird.`}
+      if(this.flightSpeed>0){return `The ${this.name} flies at speeds of up to ${this.flightSpeed} meters per second!`}
+      else{return `The ${this.name} is a flightless bird.`}
     }
   }
   /**
